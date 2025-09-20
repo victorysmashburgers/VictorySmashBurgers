@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victory Smash Burgers</title>
+    <!-- Incluir Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Incluir fuente Inter de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Nueva regla para evitar el redimensionamiento del cuadro de texto */
+        .sugerencia-box {
+            resize: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 max-w-7xl">
+
+        <!-- Sección de encabezado -->
+        <header class="text-center my-10 bg-white p-6 rounded-3xl shadow-lg">
+            <h1 class="text-4xl font-bold text-gray-900 mb-2">¡Bienvenidos a Victory Smash Burgers!</h1>
+            <p class="text-lg text-gray-600">¡La mejor smash burger de la ciudad, hechas con ingredientes 100% frescos y mucho amor!</p>
+        </header>
+
+        <!-- Sección de menú -->
+        <section class="my-10">
+            <h2 class="text-3xl font-bold text-center mb-6 text-gray-900">Nuestro Menú</h2>
+            <!-- Contenedor del menú con grilla responsive -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Elemento de Hamburguesa 1 -->
+                <div id="hamburguesa-1" class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="Old School.jpg" alt="Old School">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" data-item-name="Old School">Old School</h3>
+                    <p class="text-gray-600 mb-4" data-item-description="Pan Brioche artesanal, 1 carnes 100% res 120gr, Tomate, Lechuga, Cebolla, Papas Fritas Cabello De Ángel, Mayonesa, Ketchup, Mostaza.">Pan Brioche artesanal, 1 carnes 100% res 120gr, Tomate, Lechuga, Cebolla, Papas Fritas Cabello De Ángel, Mayonesa, Ketchup, Mostaza.</p>
+                    <details>
+                        <summary>Extras</summary>
+                        <div class="extras-content">
+                            <p><strong>Aderezos:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Aderezo de la Casa" data-precio="1.50"> Aderezo de la Casa ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Aderezo Basico" data-precio="1.00"> Aderezo Basico ($1.00)</label></li>
+                            </ul>
+                            <p><strong>Extras:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Papas Fritas 150 gr" data-precio="1.50"> Papas Fritas 150 gr ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Tocineta" data-precio="1.00"> Tocineta ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Americano (kraft)" data-precio="0.80"> Queso Americano (kraft) ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Mozzarella" data-precio="0.80"> Queso Mozzarella ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Huevo" data-precio="0.50"> Huevo ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Pepinillos" data-precio="0.50"> Pepinillos ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Jalapeños" data-precio="0.50"> Jalapeños ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Encurtidas" data-precio="1.00"> Cebolla Encurtidas ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Crunchy" data-precio="1.00"> Cebolla Crunchy ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Ceramelizada" data-precio="1.00"> Cebolla Ceramelizada ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla al Grill" data-precio="1.00"> Cebolla al Grill ($1.00)</label></li>
+                            </ul>
+                        </div>
+                    </details>  
+                    <div class="sugerencia-container mt-4">
+                        <label for="sugerencia-old-school" class="block text-sm font-medium text-gray-700">¿Alguna sugerencia especial?</label>
+                        <textarea id="sugerencia-old-school" class="sugerencia-box w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" rows="3" placeholder="Ej: Sin cebolla, extra tomate, etc." maxlength="300"></textarea>
+                    </div>  
+                  <span class="text-lg font-bold text-green-600">$5.00</span>
+                    <!-- Botón para añadir a la orden -->
+                    <button class="w-full mt-4 py-2 px-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg transition-colors duration-300 add-to-order-btn" data-item-name="Old School" data-item-price="5.00">Añadir al Pedido</button>
+                </div>
+
+                <!-- Elemento de Hamburguesa 2 -->
+                <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="Victory Smash Jr.jpg" alt="Victory Smash Jr'">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" data-item-name="Victory Smash Jr">Victory Smash Jr</h3>
+                    <p class="text-gray-600 mb-4">Pan Brioche artesanal, 1 carnes 100% res smash 80gr c/u, 1 Queso Americanos (Kraft), 1 Tocineta, Cebolla Caramelizada, Pepinillos, Aderezo Vic.</p>
+                    <details>
+                        <summary>Extras</summary>
+                        <div class="extras-content">
+                            <p><strong>Aderezos:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Aderezo de la Casa" data-precio="1.50"> Aderezo de la Casa ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Aderezo Basico" data-precio="1.00"> Aderezo Basico ($1.00)</label></li>
+                            </ul>
+                            <p><strong>Extras:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Papas Fritas 150 gr" data-precio="1.50"> Papas Fritas 150 gr ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Tocineta" data-precio="1.00"> Tocineta ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Americano (kraft)" data-precio="0.80"> Queso Americano (kraft) ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Mozzarella" data-precio="0.80"> Queso Mozzarella ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Huevo" data-precio="0.50"> Huevo ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Pepinillos" data-precio="0.50"> Pepinillos ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Jalapeños" data-precio="0.50"> Jalapeños ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Encurtidas" data-precio="1.00"> Cebolla Encurtidas ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Crunchy" data-precio="1.00"> Cebolla Crunchy ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Ceramelizada" data-precio="1.00"> Cebolla Ceramelizada ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla al Grill" data-precio="1.00"> Cebolla al Grill ($1.00)</label></li>
+                            </ul>
+                        </div>
+                    </details>  
+                    <div class="sugerencia-container mt-4">
+                        <label for="sugerencia-Victory Smash Jr" class="block text-sm font-medium text-gray-700">¿Alguna sugerencia especial?</label>
+                        <textarea id="sugerencia-Victory Smash Jr" class="sugerencia-box w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" rows="3" placeholder="Ej: Sin cebolla, extra tomate, etc." maxlength="300"></textarea>
+                    </div>  
+                    <span class="text-lg font-bold text-green-600">$5.00</span>
+                    <!-- Botón para añadir a la orden -->
+                    <button class="w-full mt-4 py-2 px-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg transition-colors duration-300 add-to-order-btn" data-item-name="Victory Smash Jr" data-item-price="5.00">Añadir al Pedido</button>
+                </div>
+
+                <!-- Elemento de Hamburguesa 3 -->
+                <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="Chicken Jr.jpg" alt="Chicken Jr">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" data-item-name="Chicken Jr">Chicken Jr</h3>
+                    <p class="text-gray-600 mb-4">Pan Brioche artesanal, 1 Medallón de pollo 120gr, Lechuga, Tomate, cebolla, Papas Fritas Cabello De Ángel, Mayonesa, Ketchup, Mostaza..</p>
+                    <details>
+                        <summary>Extras</summary>
+                        <div class="extras-content">
+                            <p><strong>Aderezos:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Aderezo de la Casa" data-precio="1.50"> Aderezo de la Casa ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Aderezo Basico" data-precio="1.00"> Aderezo Basico ($1.00)</label></li>
+                            </ul>
+                            <p><strong>Extras:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Papas Fritas 150 gr" data-precio="1.50"> Papas Fritas 150 gr ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Tocineta" data-precio="1.00"> Tocineta ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Americano (kraft)" data-precio="0.80"> Queso Americano (kraft) ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Mozzarella" data-precio="0.80"> Queso Mozzarella ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Huevo" data-precio="0.50"> Huevo ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Pepinillos" data-precio="0.50"> Pepinillos ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Jalapeños" data-precio="0.50"> Jalapeños ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Encurtidas" data-precio="1.00"> Cebolla Encurtidas ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Crunchy" data-precio="1.00"> Cebolla Crunchy ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Ceramelizada" data-precio="1.00"> Cebolla Ceramelizada ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla al Grill" data-precio="1.00"> Cebolla al Grill ($1.00)</label></li>
+                            </ul>
+                        </div>
+                    </details>  
+                    <div class="sugerencia-container mt-4">
+                        <label for="sugerencia-Chicken Jr" class="block text-sm font-medium text-gray-700">¿Alguna sugerencia especial?</label>
+                        <textarea id="sugerencia-Chicken Jr" class="sugerencia-box w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" rows="3" placeholder="Ej: Sin cebolla, extra tomate, etc." maxlength="300"></textarea>
+                    </div> 
+                    <span class="text-lg font-bold text-green-600">$4.00</span>
+                    <!-- Botón para añadir a la orden -->
+                    <button class="w-full mt-4 py-2 px-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg transition-colors duration-300 add-to-order-btn" data-item-name="Chicken Jr" data-item-price="4.00">Añadir al Pedido</button>
+                </div>
+
+                <!-- Elemento de Hamburguesa 4 -->
+                <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="Americana Burger Jr.jpg" alt="Americana Burger Jr">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" data-item-name="Americana Burger Jr">Americana Burger Jr</h3>
+                    <p class="text-gray-600 mb-4">Pan Brioche artesanal, 1 carnes 100% res 120gr, Queso Americanos (Kraft), Pepinillos. Lechuga, Cebolla, Mayonesa, Ketchup, Mostaza.</p>
+                    <details>
+                        <summary>Extras</summary>
+                        <div class="extras-content">
+                            <p><strong>Aderezos:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Aderezo de la Casa" data-precio="1.50"> Aderezo de la Casa ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Aderezo Basico" data-precio="1.00"> Aderezo Basico ($1.00)</label></li>
+                            </ul>
+                            <p><strong>Extras:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Papas Fritas 150 gr" data-precio="1.50"> Papas Fritas 150 gr ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Tocineta" data-precio="1.00"> Tocineta ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Americano (kraft)" data-precio="0.80"> Queso Americano (kraft) ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Mozzarella" data-precio="0.80"> Queso Mozzarella ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Huevo" data-precio="0.50"> Huevo ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Pepinillos" data-precio="0.50"> Pepinillos ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Jalapeños" data-precio="0.50"> Jalapeños ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Encurtidas" data-precio="1.00"> Cebolla Encurtidas ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Crunchy" data-precio="1.00"> Cebolla Crunchy ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Ceramelizada" data-precio="1.00"> Cebolla Ceramelizada ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla al Grill" data-precio="1.00"> Cebolla al Grill ($1.00)</label></li>
+                            </ul>
+                        </div>
+                    </details>  
+                    <div class="sugerencia-container mt-4">
+                        <label for="sugerencia-Americana Burger Jr" class="block text-sm font-medium text-gray-700">¿Alguna sugerencia especial?</label>
+                        <textarea id="sugerencia-Americana Burger Jr" class="sugerencia-box w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" rows="3" placeholder="Ej: Sin cebolla, extra tomate, etc." maxlength="300"></textarea>
+                    </div> 
+                    <span class="text-lg font-bold text-green-600">$5.00</span>
+                    <!-- Botón para añadir a la orden -->
+                    <button class="w-full mt-4 py-2 px-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg transition-colors duration-300 add-to-order-btn" data-item-name="Americana Burger Jr" data-item-price="5.00">Añadir al Pedido</button>
+                </div>
+
+                <!-- Puedes agregar más elementos de menú aquí -->
+                <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="Royal Chicken.jpg" alt="Royal Chicken">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" data-item-name="Royal Chicken">Royal Chicken</h3>
+                    <p class="text-gray-600 mb-4">Pan Brioche artesanal, 1 Medallón de pollo 120gr, Huevo, Queso Americano (kraft),Tocineta, Lechuga, Tomate, cebolla, Papas Fritas Cabello De Ángel, Mayonesa, Ketchup, Mostaza.</p>
+                    <details>
+                        <summary>Extras</summary>
+                        <div class="extras-content">
+                            <p><strong>Aderezos:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Aderezo de la Casa" data-precio="1.50"> Aderezo de la Casa ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Aderezo Basico" data-precio="1.00"> Aderezo Basico ($1.00)</label></li>
+                            </ul>
+                            <p><strong>Extras:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Papas Fritas 150 gr" data-precio="1.50"> Papas Fritas 150 gr ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Tocineta" data-precio="1.00"> Tocineta ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Americano (kraft)" data-precio="0.80"> Queso Americano (kraft) ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Mozzarella" data-precio="0.80"> Queso Mozzarella ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Huevo" data-precio="0.50"> Huevo ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Pepinillos" data-precio="0.50"> Pepinillos ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Jalapeños" data-precio="0.50"> Jalapeños ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Encurtidas" data-precio="1.00"> Cebolla Encurtidas ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Crunchy" data-precio="1.00"> Cebolla Crunchy ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Ceramelizada" data-precio="1.00"> Cebolla Ceramelizada ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla al Grill" data-precio="1.00"> Cebolla al Grill ($1.00)</label></li>
+                            </ul>
+                        </div>
+                    </details>  
+                    <div class="sugerencia-container mt-4">
+                        <label for="sugerencia-Royal Chicken" class="block text-sm font-medium text-gray-700">¿Alguna sugerencia especial?</label>
+                        <textarea id="sugerencia-Royal Chicken" class="sugerencia-box w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" rows="3" placeholder="Ej: Sin cebolla, extra tomate, etc." maxlength="300"></textarea>
+                    </div> 
+                    <span class="text-lg font-bold text-green-600">$8.00</span>
+                    <!-- Botón para añadir a la orden -->
+                    <button class="w-full mt-4 py-2 px-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg transition-colors duration-300 add-to-order-btn" data-item-name="Royal Chicken" data-item-price="8.00">Añadir al Pedido</button>
+                </div>
+                
+                <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="Duxelle de Champignons Deluxe.jpg" alt="Duxelle de Champignons Deluxe">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" data-item-name="Duxelle de Champignons Deluxe">Duxelle de Champignons Deluxe</h3>
+                    <p class="text-gray-600 mb-4">Pan Brioche artesanal, 1 carnes 100% res 120gr, Duxelle de Champigon, Queso Mozzarella, Cebolla Caramelizada, Aderezo Mayo Soya, Acompañado de papas a la francesa.</p>
+                    <details>
+                        <summary>Extras</summary>
+                        <div class="extras-content">
+                            <p><strong>Aderezos:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Aderezo de la Casa" data-precio="1.50"> Aderezo de la Casa ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Aderezo Basico" data-precio="1.00"> Aderezo Basico ($1.00)</label></li>
+                            </ul>
+                            <p><strong>Extras:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Papas Fritas 150 gr" data-precio="1.50"> Papas Fritas 150 gr ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Tocineta" data-precio="1.00"> Tocineta ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Americano (kraft)" data-precio="0.80"> Queso Americano (kraft) ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Mozzarella" data-precio="0.80"> Queso Mozzarella ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Huevo" data-precio="0.50"> Huevo ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Pepinillos" data-precio="0.50"> Pepinillos ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Jalapeños" data-precio="0.50"> Jalapeños ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Encurtidas" data-precio="1.00"> Cebolla Encurtidas ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Crunchy" data-precio="1.00"> Cebolla Crunchy ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Ceramelizada" data-precio="1.00"> Cebolla Ceramelizada ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla al Grill" data-precio="1.00"> Cebolla al Grill ($1.00)</label></li>
+                            </ul>
+                        </div>
+                    </details>  
+                    <div class="sugerencia-container mt-4">
+                        <label for="sugerencia-Duxelle de Champignons Deluxe" class="block text-sm font-medium text-gray-700">¿Alguna sugerencia especial?</label>
+                        <textarea id="sugerencia-Duxelle de Champignons Deluxe" class="sugerencia-box w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" rows="3" placeholder="Ej: Sin cebolla, extra tomate, etc." maxlength="300"></textarea>
+                    </div> 
+                    <span class="text-lg font-bold text-green-600">$9.00</span>
+                    <!-- Botón para añadir a la orden -->
+                    <button class="w-full mt-4 py-2 px-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg transition-colors duration-300 add-to-order-btn" data-item-name="Duxelle de Champignons Deluxe" data-item-price="9.00">Añadir al Pedido</button>
+                </div>
+
+                <!-- Puedes agregar más elementos de menú aquí -->
+                <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="Victory Smash Deluxe.jpg" alt="Victory Smash Deluxe'">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" data-item-name="Victory Smash Deluxe">Victory Smash Deluxe</h3>
+                    <p class="text-gray-600 mb-4">Pan Brioche artesanal, 2 carnes 100% res smash 80gr c/u, 2 Queso Americanos (Kraft), 2 Tocineta, Cebolla Caramelizada, Pepinillos, Aderezo Vic, Acompañado de papas a la francesa.</p>
+                    <details>
+                        <summary>Extras</summary>
+                        <div class="extras-content">
+                            <p><strong>Aderezos:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Aderezo de la Casa" data-precio="1.50"> Aderezo de la Casa ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Aderezo Basico" data-precio="1.00"> Aderezo Basico ($1.00)</label></li>
+                            </ul>
+                            <p><strong>Extras:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Papas Fritas 150 gr" data-precio="1.50"> Papas Fritas 150 gr ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Tocineta" data-precio="1.00"> Tocineta ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Americano (kraft)" data-precio="0.80"> Queso Americano (kraft) ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Mozzarella" data-precio="0.80"> Queso Mozzarella ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Huevo" data-precio="0.50"> Huevo ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Pepinillos" data-precio="0.50"> Pepinillos ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Jalapeños" data-precio="0.50"> Jalapeños ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Encurtidas" data-precio="1.00"> Cebolla Encurtidas ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Crunchy" data-precio="1.00"> Cebolla Crunchy ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Ceramelizada" data-precio="1.00"> Cebolla Ceramelizada ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla al Grill" data-precio="1.00"> Cebolla al Grill ($1.00)</label></li>
+                            </ul>
+                        </div>
+                    </details>  
+                    <div class="sugerencia-container mt-4">
+                        <label for="sugerencia-Victory Smash Deluxe" class="block text-sm font-medium text-gray-700">¿Alguna sugerencia especial?</label>
+                        <textarea id="sugerencia-Victory Smash Deluxe" class="sugerencia-box w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" rows="3" placeholder="Ej: Sin cebolla, extra tomate, etc." maxlength="300"></textarea>
+                    </div> 
+                    <span class="text-lg font-bold text-green-600">$9.00</span>
+                    <!-- Botón para añadir a la orden -->
+                    <button class="w-full mt-4 py-2 px-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg transition-colors duration-300 add-to-order-btn" data-item-name="Victory Smash Deluxe" data-item-price="9.00">Añadir al Pedido</button>
+                </div>
+                
+                <!-- Puedes agregar más elementos de menú aquí -->
+                <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="Oklahoma Onion Deluxe.jpg" alt="Oklahoma Onion Deluxe">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" data-item-name="Oklahoma Onion Deluxe">Oklahoma Onion Deluxe</h3>
+                    <p class="text-gray-600 mb-4">Pan Brioche artesanal, 2 carnes 100% res smash 80gr c/u, Queso Americanos (Kraft), Queso Mozzarella, Cebolla al Gril, Jalapeño, Aderezo La Intensa, acompañado de papas a la francesa.</p>
+                    <details>
+                        <summary>Extras</summary>
+                        <div class="extras-content">
+                            <p><strong>Aderezos:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Aderezo de la Casa" data-precio="1.50"> Aderezo de la Casa ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Aderezo Basico" data-precio="1.00"> Aderezo Basico ($1.00)</label></li>
+                            </ul>
+                            <p><strong>Extras:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Papas Fritas 150 gr" data-precio="1.50"> Papas Fritas 150 gr ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Tocineta" data-precio="1.00"> Tocineta ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Americano (kraft)" data-precio="0.80"> Queso Americano (kraft) ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Mozzarella" data-precio="0.80"> Queso Mozzarella ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Huevo" data-precio="0.50"> Huevo ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Pepinillos" data-precio="0.50"> Pepinillos ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Jalapeños" data-precio="0.50"> Jalapeños ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Encurtidas" data-precio="1.00"> Cebolla Encurtidas ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Crunchy" data-precio="1.00"> Cebolla Crunchy ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Ceramelizada" data-precio="1.00"> Cebolla Ceramelizada ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla al Grill" data-precio="1.00"> Cebolla al Grill ($1.00)</label></li>
+                            </ul>
+                        </div>
+                    </details>  
+                    <div class="sugerencia-container mt-4">
+                        <label for="sugerencia-Oklahoma Onion Deluxe" class="block text-sm font-medium text-gray-700">¿Alguna sugerencia especial?</label>
+                        <textarea id="sugerencia-Oklahoma Onion Deluxe" class="sugerencia-box w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" rows="3" placeholder="Ej: Sin cebolla, extra tomate, etc." maxlength="300"></textarea>
+                    </div> 
+                    <span class="text-lg font-bold text-green-600">$9.00</span>
+                    <!-- Botón para añadir a la orden -->
+                    <button class="w-full mt-4 py-2 px-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg transition-colors duration-300 add-to-order-btn" data-item-name="Oklahoma Onion Deluxe" data-item-price="9.00">Añadir al Pedido</button>
+                </div>
+                
+                <!-- Puedes agregar más elementos de menú aquí -->
+                <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="Old School Spezial.jpg" alt="Old School Spezial">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" data-item-name="Old School Spezial">Old School Spezial</h3>
+                    <p class="text-gray-600 mb-4">Pan Brioche artesanal, 1 Medallón de carne 100% res 120gr, Queso Americanos (Kraft), Tocineta, Huevo, Papas Fritas Cabello De Ángel, Lechuga, Tomate, Cebolla, Mayonesa, Ketchup, Mostaza, Acompañado de papas a la francesa.</p>
+                    <details>
+                        <summary>Extras</summary>
+                        <div class="extras-content">
+                            <p><strong>Aderezos:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Aderezo de la Casa" data-precio="1.50"> Aderezo de la Casa ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Aderezo Basico" data-precio="1.00"> Aderezo Basico ($1.00)</label></li>
+                            </ul>
+                            <p><strong>Extras:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Papas Fritas 150 gr" data-precio="1.50"> Papas Fritas 150 gr ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Tocineta" data-precio="1.00"> Tocineta ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Americano (kraft)" data-precio="0.80"> Queso Americano (kraft) ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Mozzarella" data-precio="0.80"> Queso Mozzarella ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Huevo" data-precio="0.50"> Huevo ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Pepinillos" data-precio="0.50"> Pepinillos ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Jalapeños" data-precio="0.50"> Jalapeños ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Encurtidas" data-precio="1.00"> Cebolla Encurtidas ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Crunchy" data-precio="1.00"> Cebolla Crunchy ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Ceramelizada" data-precio="1.00"> Cebolla Ceramelizada ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla al Grill" data-precio="1.00"> Cebolla al Grill ($1.00)</label></li>
+                            </ul>
+                        </div>
+                    </details>  
+                    <div class="sugerencia-container mt-4">
+                        <label for="sugerencia-Old School Spezial" class="block text-sm font-medium text-gray-700">¿Alguna sugerencia especial?</label>
+                        <textarea id="sugerencia-Old School Spezial" class="sugerencia-box w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" rows="3" placeholder="Ej: Sin cebolla, extra tomate, etc." maxlength="300"></textarea>
+                    </div> 
+                    <span class="text-lg font-bold text-green-600">$8.00</span>
+                    <!-- Botón para añadir a la orden -->
+                    <button class="w-full mt-4 py-2 px-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg transition-colors duration-300 add-to-order-btn" data-item-name="Old School Spezial" data-item-price="8.00">Añadir al Pedido</button>
+                </div>
+                
+                <!-- Puedes agregar más elementos de menú aquí -->
+                <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="Victory Smash.jpg" alt="Victory Smash">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" data-item-name="Victory Smash">Victory Smash</h3>
+                    <p class="text-gray-600 mb-4">Pan Brioche artesanal, 3 carnes 100% res smash 80gr c/u, 3 Queso Americanos (Kraft), 3 Tocineta, Cebolla Caramelizada, Pepinillo, Aderezo Vic, acompañado de papas a la francesa.</p>
+                    <details>
+                        <summary>Extras</summary>
+                        <div class="extras-content">
+                            <p><strong>Aderezos:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Aderezo de la Casa" data-precio="1.50"> Aderezo de la Casa ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Aderezo Basico" data-precio="1.00"> Aderezo Basico ($1.00)</label></li>
+                            </ul>
+                            <p><strong>Extras:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Papas Fritas 150 gr" data-precio="1.50"> Papas Fritas 150 gr ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Tocineta" data-precio="1.00"> Tocineta ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Americano (kraft)" data-precio="0.80"> Queso Americano (kraft) ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Mozzarella" data-precio="0.80"> Queso Mozzarella ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Huevo" data-precio="0.50"> Huevo ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Pepinillos" data-precio="0.50"> Pepinillos ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Jalapeños" data-precio="0.50"> Jalapeños ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Encurtidas" data-precio="1.00"> Cebolla Encurtidas ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Crunchy" data-precio="1.00"> Cebolla Crunchy ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Ceramelizada" data-precio="1.00"> Cebolla Ceramelizada ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla al Grill" data-precio="1.00"> Cebolla al Grill ($1.00)</label></li>
+                            </ul>
+                        </div>
+                    </details>  
+                    <div class="sugerencia-container mt-4">
+                        <label for="sugerencia-Victory Smash" class="block text-sm font-medium text-gray-700">¿Alguna sugerencia especial?</label>
+                        <textarea id="sugerencia-Victory Smash" class="sugerencia-box w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" rows="3" placeholder="Ej: Sin cebolla, extra tomate, etc." maxlength="300"></textarea>
+                    </div> 
+                    <span class="text-lg font-bold text-green-600">$12.00</span>
+                    <!-- Botón para añadir a la orden -->
+                    <button class="w-full mt-4 py-2 px-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg transition-colors duration-300 add-to-order-btn" data-item-name="Victory Smash" data-item-price="12.00">Añadir al Pedido</button>
+                </div>
+                
+                <!-- Puedes agregar más elementos de menú aquí -->
+                <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="Oklahoma Onion Burger.jpg" alt="Oklahoma Onion Burger">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" data-item-name="Oklahoma Onion Burger">Oklahoma Onion Burger</h3>
+                    <p class="text-gray-600 mb-4">Pan Brioche artesanal, 3 carnes 100% res smash 80gr c/u, 1 Queso Americanos (Kraft), 2 Queso Mozzarella, Cebolla al Gril, Jalapeño, Aderezo La Intensa, acompañado de papas a la francesa.</p>
+                    <details>
+                        <summary>Extras</summary>
+                        <div class="extras-content">
+                            <p><strong>Aderezos:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Aderezo de la Casa" data-precio="1.50"> Aderezo de la Casa ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Aderezo Basico" data-precio="1.00"> Aderezo Basico ($1.00)</label></li>
+                            </ul>
+                            <p><strong>Extras:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Papas Fritas 150 gr" data-precio="1.50"> Papas Fritas 150 gr ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Tocineta" data-precio="1.00"> Tocineta ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Americano (kraft)" data-precio="0.80"> Queso Americano (kraft) ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Mozzarella" data-precio="0.80"> Queso Mozzarella ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Huevo" data-precio="0.50"> Huevo ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Pepinillos" data-precio="0.50"> Pepinillos ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Jalapeños" data-precio="0.50"> Jalapeños ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Encurtidas" data-precio="1.00"> Cebolla Encurtidas ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Crunchy" data-precio="1.00"> Cebolla Crunchy ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Ceramelizada" data-precio="1.00"> Cebolla Ceramelizada ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla al Grill" data-precio="1.00"> Cebolla al Grill ($1.00)</label></li>
+                            </ul>
+                        </div>
+                    </details>  
+                    <div class="sugerencia-container mt-4">
+                        <label for="sugerencia-Oklahoma Onion Burger" class="block text-sm font-medium text-gray-700">¿Alguna sugerencia especial?</label>
+                        <textarea id="sugerencia-Oklahoma Onion Burger" class="sugerencia-box w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" rows="3" placeholder="Ej: Sin cebolla, extra tomate, etc." maxlength="300"></textarea>
+                    </div> 
+                    <span class="text-lg font-bold text-green-600">$12.00</span>
+                    <!-- Botón para añadir a la orden -->
+                    <button class="w-full mt-4 py-2 px-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg transition-colors duration-300 add-to-order-btn" data-item-name="Oklahoma Onion Burger" data-item-price="12.00">Añadir al Pedido</button>
+                </div>
+                
+                <!-- Puedes agregar más elementos de menú aquí -->
+                <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="Duxelle de Champignons.jpg" alt="Duxelle de Champignons">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" data-item-name="Duxelle de Champignons">Duxelle de Champignons</h3>
+                    <p class="text-gray-600 mb-4">Pan Brioche artesanal, 1 carnes 100% res 240gr, Duxelle de Champigon, Queso Mozzarella, Cebolla Caramelizada, Aderezo Mayo Soya, Acompañado de papas a la francesa</p>
+                    <details>
+                        <summary>Extras</summary>
+                        <div class="extras-content">
+                            <p><strong>Aderezos:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Aderezo de la Casa" data-precio="1.50"> Aderezo de la Casa ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Aderezo Basico" data-precio="1.00"> Aderezo Basico ($1.00)</label></li>
+                            </ul>
+                            <p><strong>Extras:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Papas Fritas 150 gr" data-precio="1.50"> Papas Fritas 150 gr ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Tocineta" data-precio="1.00"> Tocineta ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Americano (kraft)" data-precio="0.80"> Queso Americano (kraft) ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Mozzarella" data-precio="0.80"> Queso Mozzarella ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Huevo" data-precio="0.50"> Huevo ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Pepinillos" data-precio="0.50"> Pepinillos ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Jalapeños" data-precio="0.50"> Jalapeños ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Encurtidas" data-precio="1.00"> Cebolla Encurtidas ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Crunchy" data-precio="1.00"> Cebolla Crunchy ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Ceramelizada" data-precio="1.00"> Cebolla Ceramelizada ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla al Grill" data-precio="1.00"> Cebolla al Grill ($1.00)</label></li>
+                            </ul>
+                        </div>
+                    </details>  
+                    <div class="sugerencia-container mt-4">
+                        <label for="sugerencia-Duxelle de Champignons" class="block text-sm font-medium text-gray-700">¿Alguna sugerencia especial?</label>
+                        <textarea id="sugerencia-Duxelle de Champignons" class="sugerencia-box w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" rows="3" placeholder="Ej: Sin cebolla, extra tomate, etc." maxlength="300"></textarea>
+                    </div> 
+                    <span class="text-lg font-bold text-green-600">$12.00</span>
+                    <!-- Botón para añadir a la orden -->
+                    <button class="w-full mt-4 py-2 px-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg transition-colors duration-300 add-to-order-btn" data-item-name="Duxelle de Champignons" data-item-price="12.00">Añadir al Pedido</button>
+                </div>
+
+                <!-- Puedes agregar más elementos de menú aquí -->
+                <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="Cesar Burger Pollo.jpg" alt="Cesar Burger Pollo">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" data-item-name="Cesar Burger Pollo">Cesar Burger Pollo</h3>
+                    <p class="text-gray-600 mb-4">Pan Brioche artesanal, 1 Medallón de Pollo 240gr, Queso Parmesano, Tocineta, Lechuga, Aderezo Cesar, Acompañado de papas a la francesa.</p>
+                    <details>
+                        <summary>Extras</summary>
+                        <div class="extras-content">
+                            <p><strong>Aderezos:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Aderezo de la Casa" data-precio="1.50"> Aderezo de la Casa ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Aderezo Basico" data-precio="1.00"> Aderezo Basico ($1.00)</label></li>
+                            </ul>
+                            <p><strong>Extras:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Papas Fritas 150 gr" data-precio="1.50"> Papas Fritas 150 gr ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Tocineta" data-precio="1.00"> Tocineta ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Americano (kraft)" data-precio="0.80"> Queso Americano (kraft) ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Mozzarella" data-precio="0.80"> Queso Mozzarella ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Huevo" data-precio="0.50"> Huevo ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Pepinillos" data-precio="0.50"> Pepinillos ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Jalapeños" data-precio="0.50"> Jalapeños ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Encurtidas" data-precio="1.00"> Cebolla Encurtidas ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Crunchy" data-precio="1.00"> Cebolla Crunchy ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Ceramelizada" data-precio="1.00"> Cebolla Ceramelizada ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla al Grill" data-precio="1.00"> Cebolla al Grill ($1.00)</label></li>
+                            </ul>
+                        </div>
+
+
+                    </details>  
+                    <div class="sugerencia-container mt-4">
+                        <label for="sugerencia-Cesar Burger Pollo" class="block text-sm font-medium text-gray-700">¿Alguna sugerencia especial?</label>
+                        <textarea id="sugerencia-Cesar Burger Pollo" class="sugerencia-box w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" rows="3" placeholder="Ej: Sin cebolla, extra tomate, etc." maxlength="300"></textarea>
+                    </div> 
+                    <span class="text-lg font-bold text-green-600">$11.00</span>
+                    <!-- Botón para añadir a la orden -->
+                    <button class="w-full mt-4 py-2 px-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg transition-colors duration-300 add-to-order-btn" data-item-name="Cesar Burger Pollo" data-item-price="11.00">Añadir al Pedido</button>
+                </div>
+
+                <!-- Puedes agregar más elementos de menú aquí -->
+                <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="Mamma mia.jpg" alt="Mamma mia">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" data-item-name="Mamma mia">Mamma mia</h3>
+                    <p class="text-gray-600 mb-4">Pan Brioche artesanal, 1 carnes 100% res 240gr, Dedos de Mozzarellas, Pepperoni, Queso Mozzarella Fundido, Cebolla Crunchy, Salsa napoli, Aderezo Mayo Soya, acompañado de papas a la francesa.</p>
+                    <details>
+                        <summary>Extras</summary>
+                        <div class="extras-content">
+                            <p><strong>Aderezos:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Aderezo de la Casa" data-precio="1.50"> Aderezo de la Casa ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Aderezo Basico" data-precio="1.00"> Aderezo Basico ($1.00)</label></li>
+                            </ul>
+                            <p><strong>Extras:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Papas Fritas 150 gr" data-precio="1.50"> Papas Fritas 150 gr ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Tocineta" data-precio="1.00"> Tocineta ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Americano (kraft)" data-precio="0.80"> Queso Americano (kraft) ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Mozzarella" data-precio="0.80"> Queso Mozzarella ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Huevo" data-precio="0.50"> Huevo ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Pepinillos" data-precio="0.50"> Pepinillos ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Jalapeños" data-precio="0.50"> Jalapeños ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Encurtidas" data-precio="1.00"> Cebolla Encurtidas ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Crunchy" data-precio="1.00"> Cebolla Crunchy ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Ceramelizada" data-precio="1.00"> Cebolla Ceramelizada ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla al Grill" data-precio="1.00"> Cebolla al Grill ($1.00)</label></li>
+                            </ul>
+                        </div>
+
+
+                    </details>  
+                    <div class="sugerencia-container mt-4">
+                        <label for="sugerencia-Mamma mia" class="block text-sm font-medium text-gray-700">¿Alguna sugerencia especial?</label>
+                        <textarea id="sugerencia-Mamma mia" class="sugerencia-box w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" rows="3" placeholder="Ej: Sin cebolla, extra tomate, etc." maxlength="300"></textarea>
+                    </div> 
+                    <span class="text-lg font-bold text-green-600">$13.00</span>
+                    <!-- Botón para añadir a la orden -->
+                    <button class="w-full mt-4 py-2 px-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg transition-colors duration-300 add-to-order-btn" data-item-name="Mamma mia" data-item-price="13.00">Añadir al Pedido</button>
+                </div>
+
+                <!-- Puedes agregar más elementos de menú aquí -->
+                <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="Victory Smash 2.0.jpg" alt="Victory Smash 2.0">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" data-item-name="Victory Smash 2.0">Victory Smash 2.0</h3>
+                    <p class="text-gray-600 mb-4">Pan Brioche artesanal, 6 carnes 100% res smash 80gr c/u, 6 Queso Americanos (Kraft), 6 Tocineta, Cebolla Caramelizada, Pepinillo, Aderezo Vic, Acompañado de papas a la francesa.</p>
+                    <details>
+                        <summary>Extras</summary>
+                        <div class="extras-content">
+                            <p><strong>Aderezos:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Aderezo de la Casa" data-precio="1.50"> Aderezo de la Casa ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Aderezo Basico" data-precio="1.00"> Aderezo Basico ($1.00)</label></li>
+                            </ul>
+                            <p><strong>Extras:</strong></p>
+                            <ul class="lista-extras">
+                                <li><label><input type="checkbox" name="extra" value="Papas Fritas 150 gr" data-precio="1.50"> Papas Fritas 150 gr ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Tocineta" data-precio="1.00"> Tocineta ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Americano (kraft)" data-precio="0.80"> Queso Americano (kraft) ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Queso Mozzarella" data-precio="0.80"> Queso Mozzarella ($0.80)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Huevo" data-precio="0.50"> Huevo ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Pepinillos" data-precio="0.50"> Pepinillos ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Jalapeños" data-precio="0.50"> Jalapeños ($0.50)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Encurtidas" data-precio="1.00"> Cebolla Encurtidas ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Crunchy" data-precio="1.00"> Cebolla Crunchy ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla Ceramelizada" data-precio="1.00"> Cebolla Ceramelizada ($1.00)</label></li>
+                                <li><label><input type="checkbox" name="extra" value="Cebolla al Grill" data-precio="1.00"> Cebolla al Grill ($1.00)</label></li>
+                            </ul>
+                        </div>
+
+
+                    </details>  
+                    <div class="sugerencia-container mt-4">
+                        <label for="sugerencia-Victory Smash 2.0" class="block text-sm font-medium text-gray-700">¿Alguna sugerencia especial?</label>
+                        <textarea id="sugerencia-Victory Smash 2.0" class="sugerencia-box w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" rows="3" placeholder="Ej: Sin cebolla, extra tomate, etc." maxlength="300"></textarea>
+                    </div> 
+                    <span class="text-lg font-bold text-green-600">$20.00</span>
+                    <!-- Botón para añadir a la orden -->
+                    <button class="w-full mt-4 py-2 px-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg transition-colors duration-300 add-to-order-btn" data-item-name="Victory Smash 2.0" data-item-price="20.00">Añadir al Pedido</button>
+                </div>
+
+                <!-- Puedes agregar más elementos de menú aquí -->
+                <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="Bebidas.jpg" alt="Bebidas">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" data-item-name="Bebidas">Bebidas</h3>
+                    <p class="text-gray-600 mb-4">Pepsi, Kolita golden, Manzanita Golden, 7up.</p>
+                    <details>
+                        <summary>Bebidas</summary>
+                        <div class="Bebidas-content">
+                         <p><strong>Bebidas:</strong></p>
+                            <ul class="lista-Bebidas">
+                                <li><label><input type="checkbox" name="Bebidas" value="Pepsi 1 Lts." data-precio="1.50"> Pepsi 1 Lts ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="Bebidas" value="Manzanita Golden 1 Lts." data-precio="1.50"> Manzanita Golden 1 Lts ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="Bebidas" value="Kolita Golden 1 Lts." data-precio="1.50"> Kolita Golden 1 Lts ($1.50)</label></li>
+                                <li><label><input type="checkbox" name="Bebidas" value="7up 1 Lts." data-precio="1.50"> 7up 1 Lts ($1.50)</label></li>
+                            </ul>
+                        </div>
+
+
+                    </details>  
+                    <span class="text-lg font-bold text-green-600">$0.00</span>
+                    <!-- Botón para añadir a la orden -->
+                    <button class="w-full mt-4 py-2 px-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg transition-colors duration-300 add-to-order-btn" data-item-name="Bebidas" data-item-price="0.00">Añadir al Pedido</button>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Nueva sección para el pedido del cliente -->
+        <section class="my-10 bg-white p-6 rounded-3xl shadow-lg">
+            <!-- Campo para el nombre del cliente -->
+            <label for="customerName" class="block text-xl font-bold text-gray-900 mb-2">Tu Nombre:</label>
+            <input type="text" id="customerName" placeholder="Escribe tu nombre aquí" class="w-full px-4 py-2 mb-6 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+            
+            <h2 id="orderTitle" class="text-3xl font-bold text-center mb-6 text-gray-900">Tu Pedido</h2>
+            <ul id="order-list" class="list-disc pl-5">
+                <!-- Aquí se agregarán las hamburguesas dinámicamente con JavaScript -->
+            </ul>
+            
+            <!-- Nueva sección para el total y el botón de WhatsApp -->
+            <div id="order-summary" class="mt-6 border-t pt-4 border-gray-200">
+                <div class="flex justify-between items-center text-xl font-bold mb-4">
+                    <span>Total:</span>
+                    <span id="order-total" class="text-green-600">$0.00</span>
+                </div>
+                <!-- Botón de WhatsApp y botón de Instagram -->
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button id="whatsapp-btn" class="flex-1 py-3 px-4 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2" disabled>
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        <span>Enviar Pedido por WhatsApp</span>
+                    </button>
+                    <a id="instagram-btn" href="https://www.instagram.com/victory_smashburgers" target="_blank" class="flex-1 py-3 px-4 bg-pink-500 hover:bg-pink-600 text-white font-bold rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2">
+                        <i class="fab fa-instagram text-2xl"></i>
+                        <span>Síguenos en Instagram</span>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+        
+    </div>
+
+    <!-- Script de JavaScript para agregar funcionalidad -->
+    <script>
+        // Obtenemos todos los botones que tienen la clase 'add-to-order-btn'
+        const buttons = document.querySelectorAll('.add-to-order-btn');
+        // Obtenemos la lista donde se mostrará el pedido
+        const orderList = document.getElementById('order-list');
+        // Obtenemos el campo de entrada del nombre del cliente
+        const customerNameInput = document.getElementById('customerName');
+        // Obtenemos el título de la sección de pedido
+        const orderTitle = document.getElementById('orderTitle');
+        // Obtenemos el elemento para mostrar el total del pedido
+        const orderTotalSpan = document.getElementById('order-total');
+        // Obtenemos el botón de WhatsApp
+        const whatsappBtn = document.getElementById('whatsapp-btn');
+        // Obtenemos el botón de Instagram
+        const instagramBtn = document.getElementById('instagram-btn');
+        
+        let orderItems = [];
+
+        // Función para actualizar la visualización del pedido, el total y el botón de WhatsApp
+        const updateOrderDisplay = () => {
+            orderList.innerHTML = '';
+            let total = 0;
+
+            if (orderItems.length > 0) {
+                whatsappBtn.disabled = false;
+                whatsappBtn.classList.remove('bg-gray-400', 'hover:bg-gray-400', 'cursor-not-allowed');
+                whatsappBtn.classList.add('bg-green-500', 'hover:bg-green-600');
+            } else {
+                whatsappBtn.disabled = true;
+                whatsappBtn.classList.remove('bg-green-500', 'hover:bg-green-600');
+                whatsappBtn.classList.add('bg-gray-400', 'hover:bg-gray-400', 'cursor-not-allowed');
+            }
+
+            orderItems.forEach((item, index) => {
+                total += item.price;
+                
+                // Creamos el nuevo elemento de lista para el pedido
+                const newItem = document.createElement('li');
+                newItem.classList.add('flex', 'flex-col', 'mb-2', 'p-2', 'bg-gray-50', 'rounded-lg');
+                
+                // Creamos el contenedor para el nombre y el precio total
+                const itemDetails = document.createElement('div');
+                itemDetails.classList.add('flex', 'justify-between', 'items-center', 'font-bold');
+                itemDetails.innerHTML = `
+                    <span>${item.name}</span>
+                    <span class="text-green-600">$${item.price.toFixed(2)}</span>
+                `;
+                newItem.appendChild(itemDetails);
+
+                // Si hay extras o sugerencias, los añadimos como una sublista
+                let extrasHtml = '';
+                if (item.extras && item.extras.length > 0) {
+                    extrasHtml += '<p><strong>Extras:</strong></p>';
+                    extrasHtml += `<ul class="lista-extras mt-1">${item.extras.map(extra => `<li class="text-sm text-gray-600 list-disc ml-5">${extra.name} ($${extra.price.toFixed(2)})</li>`).join('')}</ul>`;
+                }
+
+                let suggestionHtml = '';
+                if (item.suggestion) {
+                    suggestionHtml = `<li class="text-sm text-gray-600 list-disc ml-5 mt-1">Sugerencia: ${item.suggestion}</li>`;
+                }
+                
+                if (extrasHtml || suggestionHtml) {
+                    const sublist = document.createElement('ul');
+                    sublist.classList.add('mt-1');
+                    sublist.innerHTML = extrasHtml + suggestionHtml;
+                    newItem.appendChild(sublist);
+                }
+
+                // Creamos el botón de eliminar
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Eliminar';
+                removeButton.classList.add('ml-4', 'px-3', 'py-1', 'bg-red-500', 'text-white', 'rounded-lg', 'hover:bg-red-600', 'transition-colors', 'duration-300', 'self-end', 'mt-2');
+                
+                // Le damos la funcionalidad al botón de eliminar
+                removeButton.addEventListener('click', () => {
+                    orderItems.splice(index, 1);
+                    updateOrderDisplay();
+                });
+                
+                // Añadimos el botón al nuevo elemento del pedido
+                newItem.appendChild(removeButton);
+
+                // Añadimos el nuevo elemento a la lista de pedidos
+                orderList.appendChild(newItem);
+            });
+            orderTotalSpan.textContent = `$${total.toFixed(2)}`;
+        };
+
+        // Escucha cambios en el campo de nombre para actualizar el título
+        customerNameInput.addEventListener('input', () => {
+            const name = customerNameInput.value.trim();
+            if (name !== '') {
+                orderTitle.textContent = `Tu Pedido para ${name}`;
+            } else {
+                orderTitle.textContent = 'Tu Pedido';
+            }
+        });
+
+        // Recorremos cada botón y le añadimos un "escuchador de eventos" para el clic
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Obtenemos el contenedor padre del botón para encontrar los extras
+                const menuItemContainer = button.closest('div');
+
+                // Obtenemos el nombre y el precio base de la hamburguesa
+                const itemName = button.dataset.itemName;
+                let itemPrice = parseFloat(button.dataset.itemPrice);
+
+                const extras = [];
+                // Obtenemos todos los extras seleccionados en este contenedor
+                const selectedExtras = menuItemContainer.querySelectorAll('input[type="checkbox"]:checked');
+                
+                // Iteramos sobre los extras seleccionados para sumar el precio
+                selectedExtras.forEach(extra => {
+                    const extraName = extra.value;
+                    const extraPrice = parseFloat(extra.dataset.precio);
+                    itemPrice += extraPrice;
+                    extras.push({ name: extraName, price: extraPrice });
+                });
+                
+                // Obtenemos el texto de sugerencia del cuadro de texto, si existe
+                const suggestionBox = menuItemContainer.querySelector('.sugerencia-box');
+                const suggestionText = suggestionBox ? suggestionBox.value.trim() : '';
+                
+                // Agregamos el nuevo artículo a la lista de pedidos
+                orderItems.push({
+                    name: itemName,
+                    price: itemPrice,
+                    extras: extras,
+                    suggestion: suggestionText
+                });
+
+                updateOrderDisplay();
+
+                // Limpiamos los extras seleccionados y el cuadro de sugerencia después de añadir el pedido
+                selectedExtras.forEach(extra => extra.checked = false);
+                if (suggestionBox) {
+                    suggestionBox.value = '';
+                }
+            });
+        });
+        
+        // Listener para el botón de WhatsApp
+        whatsappBtn.addEventListener('click', () => {
+            if (orderItems.length === 0) {
+                // No usar window.alert, sino un mensaje en la UI
+                console.log('Tu carrito está vacío. Agrega una hamburguesa para enviar el pedido.');
+                return;
+            }
+
+            const customerName = customerNameInput.value.trim() || 'Cliente';
+            let message = `¡Hola! Aquí está mi pedido para Victory Smash Burgers:\n\n*Pedido de ${customerName}*\n\n`;
+            let total = 0;
+
+            orderItems.forEach((item, index) => {
+                message += `${index + 1}. *${item.name}* - $${item.price.toFixed(2)}\n`;
+                if (item.extras && item.extras.length > 0) {
+                    item.extras.forEach(extra => {
+                        message += `   - Extra: ${extra.name} ($${extra.price.toFixed(2)})\n`;
+                    });
+                }
+                if (item.suggestion) {
+                    message += `   - Sugerencia: ${item.suggestion}\n`;
+                }
+                total += item.price;
+            });
+
+            message += `\n*Total a Pagar:* $${total.toFixed(2)}\n\n¡Gracias!`;
+
+            const encodedMessage = encodeURIComponent(message);
+            // Reemplazamos el enlace genérico con el número de teléfono
+            const phoneNumber = '584223332200'; // Número en formato internacional sin el '+' o '0' inicial
+            window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+        });
+
+        // Inicializar el botón de WhatsApp en estado deshabilitado
+        updateOrderDisplay();
+    </script>
+</body>
+</html>
